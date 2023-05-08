@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block page_title%} ALL CHALLENGES {% endblock %} 
+
+{%comment %} 
+Url tag is equivalent to reverse function of django; 
+month-challenge is name of path referenced in urls.py; 
+arg1(month) is present in <> in path 
+{%endcomment %} 
+
+{% block content %}
+<ul>
+  {% for month in months%}
+  <li><a href="{% url 'month-challenge' month %}">{{month}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
