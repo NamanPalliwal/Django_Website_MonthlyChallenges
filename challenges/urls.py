@@ -7,5 +7,5 @@ urlpatterns = [
          # Give unique name to path with <name> arg
          path("<str:month>", views.monthly_challenges, name = 'month-challenge'),  
          
-         path("", views.index)          # /challenges/  -  default path
+         path("", views.index, name='index')          # /challenges/  -  default path
 ]

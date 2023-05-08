@@ -9,9 +9,10 @@ arg1(month) is present in <> in path
 {%endcomment %} 
 
 {% block content %}
-<ul>
-  {% for month in months%}
-  <li><a href="{% url 'month-challenge' month %}">{{month}}</a></li>
-  {% endfor %}
-</ul>
+	{% include "challenges/includes/header.html" %}
+	<ul>
+		{% for month in months%}
+		<li><a href="{% url 'month-challenge' month %}">{{month}}</a></li>
+		{% endfor %}
+	</ul>
 {% endblock %}
