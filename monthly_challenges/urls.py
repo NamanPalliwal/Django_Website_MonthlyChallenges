@@ -18,7 +18,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path("", views.index),
+    path("", views.index, name='root'),
     path('admin/', admin.site.urls),
     path("challenges/", include("challenges.urls")),  # dont have to change path everywhere (challenge/) bcoz used reverse function to prevent hardcoding
 ]

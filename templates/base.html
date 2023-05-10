@@ -12,6 +12,11 @@
     {% block css %}{% endblock  %}
   </head>
   <body>
+    <header>
+      <nav>
+        <a href="{% url 'root' %}">ROOT</a> 
+      </nav>
+    </header>
     {% block content%} {% endblock %}
   </body>
 </html>
